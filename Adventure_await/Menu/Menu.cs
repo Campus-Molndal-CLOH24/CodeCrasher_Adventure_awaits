@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Numerics;
-using Se.Dsve.Character;
-using Se.Dsve.Game;
-using Se.Dsve.Shop;
-using Se.Dsve.Utils;
+using Adventure_await.character;
+using Adventure_await.game;
+using Adventure_await.Shop;
+using Adventure_await.Utils;
+using Adventure_await.game;
 
-namespace Se.Dsve.Menu
+namespace Adventure_await.Menu
 {
     public class Menu
     {
@@ -78,7 +79,7 @@ namespace Se.Dsve.Menu
             {
                 case 1:
                     Console.WriteLine("Going on an adventure");
-                    gameEngine.GameLoop(player);
+                    gameEngine.gameLoop(player);
                     break;
                 case 2:
                     Console.WriteLine("Show player info");
@@ -123,19 +124,19 @@ namespace Se.Dsve.Menu
             switch (choice)
             {
                 case 1:
-                    gameEngine.SetDifficulty(gameEngine.StartHP, gameEngine.LevelXp, gameEngine.WeaponDamage);
-                    player.TotalHp = gameEngine.StartHP;
-                    player.CurrentHp = gameEngine.StartHP;
-                    player.Weapon.Damage = gameEngine.WeaponDamage;
+                    gameEngine.setDifficulty(gameEngine.getStartHP(), gameEngine.getLevelXp(), gameEngine.getWeaponDamage());
+                    player.TotalHp = gameEngine.getStartHP();
+                    player.CurrentHp = gameEngine.getStartHP();
+                    player.Weapon.Damage = gameEngine.getWeaponDamage();
                     break;
                 case 2:
-                    gameEngine.SetDifficulty(50, 25, 5);
+                    gameEngine.setDifficulty(50, 25, 5);
                     player.TotalHp = 50;
                     player.CurrentHp = 50;
                     player.Weapon.Damage = 5;
                     break;
                 case 3:
-                    gameEngine.SetDifficulty(25, 10, 2);
+                    gameEngine.setDifficulty(25, 10, 2);
                     player.TotalHp = 25;
                     player.CurrentHp = 25;
                     player.Weapon.Damage = 2;
@@ -150,11 +151,11 @@ namespace Se.Dsve.Menu
         {
             player.Level = 1;
             player.Xp = 0;
-            player.TotalHp = gameEngine.StartHP;
-            player.CurrentHp = gameEngine.StartHP;
+            player.TotalHp = gameEngine.getStartHP();
+            player.CurrentHp = gameEngine.getStartHP();
             player.GoldAmount = 0;
             string weaponName = player.Weapon.Name;
-            player.Weapon = new Weapon(weaponName, gameEngine.WeaponDamage);
+            player.Weapon = new Weapon(weaponName, gameEngine.getStartHP());
         }
     }
 }

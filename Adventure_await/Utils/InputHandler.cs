@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Se.Dsve.Utils
+namespace Adventure_await.Utils
 {
     public static class InputHandler
     {

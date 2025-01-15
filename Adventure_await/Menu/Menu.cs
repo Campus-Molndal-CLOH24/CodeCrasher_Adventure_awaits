@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Numerics;
 using Adventure_await.character;
-using Adventure_await.game;
 using Adventure_await.Shop;
 using Adventure_await.Utils;
 using Adventure_await.game;
 
-namespace Adventure_await.Menu
+namespace Adventure_await.menu
 {
     public class Menu
     {

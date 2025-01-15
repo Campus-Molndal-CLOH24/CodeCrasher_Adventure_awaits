@@ -1,8 +1,8 @@
 ﻿using System; // För att använda konsolutskrifter och andra systemfunktioner
-using adventure_awaits.Character; // Antag att Player-klassen finns i det här namnområdet
-using adventure_awaits.Utils; // Antag att InputHandler-klassen finns här
+using Adventure_await.Character; // Antag att Player-klassen finns i det här namnområdet
+using Adventure_await.Utils; // Antag att InputHandler-klassen finns här
 
-namespace adventure_awaits.shop
+namespace Adventure_await.shop
 {
     public class Shop
     {

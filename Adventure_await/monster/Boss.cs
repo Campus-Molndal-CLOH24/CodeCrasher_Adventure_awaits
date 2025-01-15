@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Adventure_await
+namespace Adventure_await.monster
 {
     public class Boss : Monster
     {
@@ -22,7 +22,7 @@ namespace Adventure_await
         public void SpecialAttack(Player player)
         {
             int value = GetRandomValueFromZeroToOneHundred();
-            int dealtDamage = this.Damage;
+            int dealtDamage = Damage;
             dealtDamage = GetDamageMultiplier(player, dealtDamage);
 
             if (value < 31)
@@ -59,10 +59,10 @@ namespace Adventure_await
 
         private void MultiplyRewards()
         {
-            int xpReward = (int)(this.XpReward * 1.5);
-            int goldReward = (int)(this.GoldReward * 1.5);
-            this.XpReward = xpReward;
-            this.GoldReward = goldReward;
+            int xpReward = (int)(XpReward * 1.5);
+            int goldReward = (int)(GoldReward * 1.5);
+            XpReward = xpReward;
+            GoldReward = goldReward;
         }
 
         private int GetRandomValueFromZeroToOneHundred()

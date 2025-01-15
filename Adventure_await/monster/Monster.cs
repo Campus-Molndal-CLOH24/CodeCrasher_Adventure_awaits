@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Adventure_await
+namespace Adventure_await.monster
 {
     public class Monster
     {
